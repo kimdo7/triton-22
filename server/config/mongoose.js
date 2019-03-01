@@ -16,8 +16,6 @@ readFiles(models_path)
 function readFiles(curr_path){
     fs.readdirSync(curr_path).forEach(function (file) {
         if (file.indexOf('.js') >= 0) {
-            console.log(curr_path + '/' + file)
-            // require the file (this runs the model file which registers the schema)
             require(curr_path + '/' + file);
         }else{
             readFiles(curr_path + '/' + file)

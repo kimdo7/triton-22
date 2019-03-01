@@ -6,7 +6,6 @@ var UserSchema = new mongoose.Schema({
     nick_name: {type: String, minlength: 2 },
     sex: {type: String, required: true },
     dob: {type: Date, required: true },
-    is_freeland: {type: Boolean, default: false}
 }, { timestamps: true, upsert:true})
 
 mongoose.model('User', UserSchema);

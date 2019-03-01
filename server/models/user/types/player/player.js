@@ -6,16 +6,20 @@ var PlayerSchema = new mongoose.Schema({
      * *BASIC INFO*
      */
     basicInfo: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    position: { type: String },
-    footed: { type: String, required: true },
-    handed: { type: String, required: true },
+    is_freeland: {type: Boolean, default: false},
     current_team_id: { type: String, required: true },
     started_play_year: { type: String, required: true },
+    
+    /**
+     * *PERSONAL UNIQUE INFO*
+     */
+    player_basic_info : {type: mongoose.Schema.Types.ObjectId, ref: "PlayerInfo"},
+    player_micro_info : {type: mongoose.Schema.Types.ObjectId, ref: "PlayerMicroInfo"},
+    player_medical_info : {type: mongoose.Schema.Types.ObjectId, ref: "MedicaMicrol"},
 
     /**
      * *SPORT*
      */
-
     curr_sport : {type: mongoose.Schema.Types.ObjectId, ref: "Sport"},
     sports : [{type: mongoose.Schema.Types.ObjectId, ref: "Sport"}],
     /**

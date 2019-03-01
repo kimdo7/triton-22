@@ -34,7 +34,3 @@ var PlayerSchema = new mongoose.Schema({
 }, { timestamps: true, upsert: true })
 
 mongoose.model('Player', PlayerSchema);
-
-// Assigned Coach 
-// Assigned Personal Trainer 
-// Assignced Nutritionist 

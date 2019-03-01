@@ -17,4 +17,7 @@ app.listen(8000, function () {
     console.log("listening on port 8000");
 })
 
-require("./server/config/init_default_db/init_countries.js")
+/**
+ * *INIT ALL THE COUNTRIES* 
+ */
+// require("./server/config/init_default_db/init_countries.js")

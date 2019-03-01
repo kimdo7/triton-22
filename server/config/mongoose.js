@@ -15,10 +15,9 @@ readFiles(models_path)
 
 function readFiles(curr_path){
     fs.readdirSync(curr_path).forEach(function (file) {
-        if (file.indexOf('.js') >= 0) {
+        if (file.indexOf('.js') >= 0) 
             require(curr_path + '/' + file);
-        }else{
+        else
             readFiles(curr_path + '/' + file)
-        }
     })
 }

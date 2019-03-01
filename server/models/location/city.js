@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 
 var CitySchema = new mongoose.Schema({
     city : {type: String},
-    country : {type: String, unique: true},
-    zipcode : {type: String, unique: true},
+    country : {type: String},
+    zipcode : {type: String},
 }, { timestamps: true, upsert:true})
 
 mongoose.model('City', CitySchema);

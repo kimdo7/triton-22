@@ -11,8 +11,10 @@ mongoose.set('useCreateIndex', true)
 mongoose.connect('mongodb://localhost/triton-22', { useNewUrlParser: true });
 
 require("./server/config/mongoose.js")
-// require('./server/config/routes.js')(app)
+require('./server/config/routes.js')(app)
 // Setting our Server to Listen on Port: 8000
 app.listen(8000, function () {
     console.log("listening on port 8000");
 })
+
+require("./server/config/init_default_db/init_countries.js")

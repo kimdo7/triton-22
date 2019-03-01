@@ -6,11 +6,18 @@ var PlayerSchema = new mongoose.Schema({
      * *BASIC INFO*
      */
     basicInfo: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    position: { type: String, required: true },
-    footing: { type: String, required: true },
+    position: { type: String },
+    footed: { type: String, required: true },
+    handed: { type: String, required: true },
     current_team_id: { type: String, required: true },
     started_play_year: { type: String, required: true },
 
+    /**
+     * *SPORT*
+     */
+
+    curr_sport : {type: mongoose.Schema.Types.ObjectId, ref: "Sport"},
+    sports : [{type: mongoose.Schema.Types.ObjectId, ref: "Sport"}],
     /**
      * *TEAM*
      */

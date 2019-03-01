@@ -8,7 +8,7 @@ var Country = mongoose.model('Country')
 var models_path = path.join(__dirname, "./../../../static/csv/countries.csv");
 var stream = fs.createReadStream(models_path);
 
-var dict = {}
+var dict = []
 var csvStream = csv()
     .on("data", function (data) {
         //  console.log(data);

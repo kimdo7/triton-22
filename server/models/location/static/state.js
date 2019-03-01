@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
  */
 var StateSchema = new mongoose.Schema({
     name : {type: String},
+    code : {type: String},
     country : {type: mongoose.Schema.Types.ObjectId, ref:"Country"}
 
 }, { timestamps: true, upsert:true})

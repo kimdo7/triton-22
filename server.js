@@ -21,3 +21,4 @@ app.listen(8000, function () {
  * *INIT ALL THE COUNTRIES* 
  */
 // require("./server/config/init_default_db/init_countries.js")
+// require("./server/config/init_default_db/init_states_us.js")

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-var Country = mongoose.model('Country')
+var State = mongoose.model('State')
 
 module.exports = {
     /**
@@ -9,13 +9,13 @@ module.exports = {
      * @return all categories
      */
     getAll: function (req, res) {
-        Country.find().sort({name: 1}).exec(function(err, results){
+        State.find().sort({name: 1}).exec(function(err, results){
             if (err)
                 res.json({ message: "Error", error: err })
             else
                 res.json({
                     message: "Success",
-                    title: "All Counties",
+                    title: "All States",
                     data: results
                 })
         })
